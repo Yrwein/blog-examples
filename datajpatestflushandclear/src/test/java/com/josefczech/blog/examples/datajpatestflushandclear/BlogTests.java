@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
     "logging.level.org.springframework.test.context.transaction= INFO",
     "logging.level.org.hibernate.SQL= DEBUG"
 })
-class BlogTests {
+public class BlogTests {
     @Autowired
     private UserRepository userRepository;
 

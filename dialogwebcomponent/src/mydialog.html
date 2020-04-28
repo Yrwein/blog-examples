@@ -1,0 +1,24 @@
+<template>
+    <link rel="stylesheet" href="__dialogPolyfillCss__">
+    <style>
+        dialog {
+            width: 25%;
+            height: 25%;
+        }
+
+        dialog .close-button {
+            float: right;
+        }
+
+        dialog::backdrop /* native */, dialog + .backdrop /* polyfill */ {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <dialog>
+        <div class="header">
+            <slot name="title">Use 'title' slot</slot>
+            <button class='close-button'>X</button>
+        </div>
+        <slot name="content">Use 'content' slot</slot>
+    </dialog>
+</template>

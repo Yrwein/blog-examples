@@ -7,13 +7,6 @@
 <body>
     <button id="show-custom-dialog-button">Show dialog</button>
 
-    <script>
-        const showDialogButton = document.getElementById('show-custom-dialog-button');
-        showDialogButton.addEventListener('click', function () {
-            document.getElementById('custom-dialog').showModal();
-        });
-    </script>
-
     <my-dialog id="custom-dialog">
         <b slot="title">Custom title</b>
         <p slot="content">Custom dialog content</p>

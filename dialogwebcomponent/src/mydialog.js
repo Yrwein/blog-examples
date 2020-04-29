@@ -1,10 +1,9 @@
-
 import dialogPolyfill from 'dialog-polyfill'
 import myHTMLDialogTemplateString from './mydialog.html'
+import {convertTemplateStringToDomElement} from './utils.js'
 
-const helperElement = document.createElement('div');
-helperElement.innerHTML = myHTMLDialogTemplateString.trim();
-const myHTMLDialogTemplate = helperElement.firstChild;
+console.log(convertTemplateStringToDomElement);
+const myHTMLDialogTemplate = convertTemplateStringToDomElement(myHTMLDialogTemplateString);
 
 // without polyfill it might be good to extend HTMLDialogElement
 class MyHTMLDialogElement extends HTMLElement {

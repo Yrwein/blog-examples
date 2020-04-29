@@ -1,0 +1,15 @@
+
+@import '~dialog-polyfill/dialog-polyfill.css';
+
+dialog {
+    width: 25%;
+    height: 25%;
+}
+
+dialog .close-button {
+    float: right;
+}
+
+dialog::backdrop /* native */, dialog + .backdrop /* polyfill */ {
+    background-color: rgba(0, 0, 0, 0.5);
+}

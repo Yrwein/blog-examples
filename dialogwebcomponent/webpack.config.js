@@ -11,14 +11,20 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        loader: 'file-loader',
-        options: {
-          outputPath: 'css',
-        },
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'css',
+            },
+          },
+          'extract-loader',
+          'css-loader',
+        ],
       },
       {
         test: /\.html$/i,
-        loader: 'raw-loader',
+        loader: 'html-loader',
       },
     ],
   },

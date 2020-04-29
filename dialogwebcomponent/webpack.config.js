@@ -14,11 +14,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: [
-          'file-loader?outputPath=css',
-          'extract-loader',
-          'css-loader',
-        ],
+        loader: 'css-loader',
       },
       {
         test: require.resolve('./src/index.html'),
